@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS `UniversityDB`;
+CREATE DATABASE `UniversityDB`;
 
 USE `UniversityDB`;
 
-CREATE TABLE IF NOT EXISTS `Students` (
+CREATE TABLE `Students` (
    `StudentID` INT PRIMARY KEY AUTO_INCREMENT,  -- MySQL Example: AUTO_INCREMENT
    -- For other databases (e.g., PostgreSQL, SQL Server) you might use SERIAL or IDENTITY
    `FirstName` VARCHAR(50) NOT NULL,
@@ -26,12 +26,12 @@ WHERE `FirstName` = 'Bob' AND `LastName` = 'Johnson';
 DELETE FROM `Students`
 WHERE `FirstName` = 'Charlie' AND `LastName` = 'Lee';
 
-CREATE TABLE IF NOT EXISTS `Courses` (
+CREATE TABLE `Courses` (
     `CourseID` INT PRIMARY KEY AUTO_INCREMENT, -- Or SERIAL/IDENTITY as needed for your DBMS
     `CourseName` VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS `Enrollments` (
+CREATE TABLE `Enrollments` (
     `EnrollmentID` INT PRIMARY KEY AUTO_INCREMENT, -- Or SERIAL/IDENTITY
     `StudentID` INT,
     `CourseID` INT,
